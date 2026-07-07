@@ -18,19 +18,14 @@ Para evitar falhas com a autenticação de duplo fator (MFA) do Office 365 no pi
 portal_laudos/
 │
 ├── portal_laudos_estrutura/
-│   ├── resources/          # Recursos e suporte dos testes
-│   │   ├── keywords/       # Keywords reutilizáveis (Ações do sistema)
-│   │   ├── locators/       # Mapeamento de elementos de tela
-│   │   └── variables/      # Arquivos de variáveis e templates (.example)
-│   │
-│   └── tests/              # Suites de testes estruturadas (.robot)
-│       ├── auth/           # Geração de massa e sessão interativa
-│       └── laudos/         # Validações das regras de negócio de laudos
+│   ├── resources/          # Keywords, Locators, Variables
+│   └── tests/              # Suites .robot (auth, laudos)
 │
-├── .gitlab-ci.yml          # Configuração do Pipeline do GitLab CI
-├── .gitignore              # Filtros de arquivos locais e relatórios
-├── requirements.txt        # Dependências e bibliotecas Python
-└── README.md               # Documentação principal do projeto
+├── .gitlab-ci.yml          # Pipeline
+├── .gitignore              # Filtros de arquivos
+├── requirements.txt        # Dependências
+└── README.md               # Documentação
+
 ```
 
 ---
