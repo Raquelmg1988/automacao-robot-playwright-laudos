@@ -1,0 +1,162 @@
+{"level":30,"time":"2026-06-18T03:52:19.044Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Listening on 127.0.0.1:58166"}
+(node:21224) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2026-06-18T03:52:19.315Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-06-18T03:52:20.709Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Adding browser to stack: chromium, version: 140.0.7339.16"}
+{"level":30,"time":"2026-06-18T03:52:20.720Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-06-18T03:52:20.720Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-06-18T03:52:20.750Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-06-18T03:52:20.751Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"storageState\":\"C:\\\\Users\\\\raquel.goncalves\\\\portal_laudos\\\\portal_laudos_estrutura\\\\resources/../../auth_state.json\",\"viewport\":{\"height\":720,\"width\":1280}}"}
+{"level":30,"time":"2026-06-18T03:52:20.751Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@bcf57f019b89c9fb7e68a6e30444c018\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=d2cb5901-c13e-4294-a1b1-f3c764828c5f\"}"}
+{"level":30,"time":"2026-06-18T03:52:20.751Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Trace file: "}
+{"level":30,"time":"2026-06-18T03:52:21.657Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Setting default timeout for context context=7db417c2-440e-4d0b-9388-0df2c155ad9a to 10000"}
+{"level":30,"time":"2026-06-18T03:52:21.658Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method newContext"}
+{"level":30,"time":"2026-06-18T03:52:21.657Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Changed active context: context=7db417c2-440e-4d0b-9388-0df2c155ad9a"}
+{"level":30,"time":"2026-06-18T03:52:21.676Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-06-18T03:52:21.677Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@bcf57f019b89c9fb7e68a6e30444c018\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=7db417c2-440e-4d0b-9388-0df2c155ad9a\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@184e622effe7c2dfef5ed695432313c9\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"storageState\":\"C:\\\\Users\\\\raquel.goncalves\\\\portal_laudos\\\\portal_laudos_estrutura\\\\resources/../../auth_state.json\",\"viewport\":{\"height\":720,\"width\":1280}},\"traceFile\":\"\"}],\"id\":\"browser=d2cb5901-c13e-4294-a1b1-f3c764828c5f\"}"}
+{"level":30,"time":"2026-06-18T03:52:21.806Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Video path: undefined"}
+{"level":30,"time":"2026-06-18T03:52:21.806Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Changed active page"}
+{"level":30,"time":"2026-06-18T03:52:22.099Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method newPage"}
+{"level":30,"time":"2026-06-18T03:52:22.109Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-06-18T03:52:22.110Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-06-18T03:52:27.514Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-06-18T03:52:27.533Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2026-06-18T03:52:27.534Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is disabled, return Locator: xpath=//button[contains(.,'Entrar com Office 365')] in page."}
+{"level":30,"time":"2026-06-18T03:52:27.568Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getElementCount"}
+{"level":30,"time":"2026-06-18T03:52:27.583Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:27.583Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(.,'Adicionar Laudo')] in page."}
+{"level":30,"time":"2026-06-18T03:52:27.594Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:27.603Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:27.606Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:27.613Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:27.613Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] in page."}
+{"level":30,"time":"2026-06-18T03:52:27.619Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:27.636Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:27.638Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:27.643Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:27.645Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:27.651Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:27.651Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=(//input[contains(@class,'MuiInputBase-input')])[1] in page."}
+{"level":30,"time":"2026-06-18T03:52:27.657Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:27.666Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-06-18T03:52:27.666Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=(//input[contains(@class,'MuiInputBase-input')])[1] in page."}
+{"level":30,"time":"2026-06-18T03:52:27.700Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method fillText"}
+{"level":30,"time":"2026-06-18T03:52:30.715Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.715Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] in page."}
+{"level":30,"time":"2026-06-18T03:52:30.720Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.732Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:30.735Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:30.740Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:30.742Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:30.747Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.747Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] in page."}
+{"level":30,"time":"2026-06-18T03:52:30.752Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.760Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.760Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] in page."}
+{"level":30,"time":"2026-06-18T03:52:30.784Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.791Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method click"}
+{"level":30,"time":"2026-06-18T03:52:30.792Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] in page."}
+{"level":30,"time":"2026-06-18T03:52:30.908Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method click"}
+{"level":30,"time":"2026-06-18T03:52:30.918Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.918Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@required and @type='text' and not(@disabled)][1] in page."}
+{"level":30,"time":"2026-06-18T03:52:30.923Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.933Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-06-18T03:52:30.933Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@required and @type='text' and not(@disabled)][1] in page."}
+{"level":30,"time":"2026-06-18T03:52:30.968Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method fillText"}
+{"level":30,"time":"2026-06-18T03:52:30.980Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.980Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@role='combobox'] in page."}
+{"level":30,"time":"2026-06-18T03:52:30.986Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:30.994Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method click"}
+{"level":30,"time":"2026-06-18T03:52:30.994Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@role='combobox'] in page."}
+{"level":30,"time":"2026-06-18T03:52:31.129Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method click"}
+{"level":30,"time":"2026-06-18T03:52:31.138Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-06-18T03:52:31.138Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@role='combobox'] in page."}
+{"level":30,"time":"2026-06-18T03:52:31.314Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method typeText"}
+{"level":30,"time":"2026-06-18T03:52:31.323Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:31.324Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=(//li[@role='option'])[1] in page."}
+{"level":30,"time":"2026-06-18T03:52:35.222Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:35.233Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method click"}
+{"level":30,"time":"2026-06-18T03:52:35.233Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=(//li[@role='option'])[1] in page."}
+{"level":30,"time":"2026-06-18T03:52:35.286Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method click"}
+{"level":30,"time":"2026-06-18T03:52:36.305Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:36.305Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@type='date'] in page."}
+{"level":30,"time":"2026-06-18T03:52:36.309Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:36.320Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method click"}
+{"level":30,"time":"2026-06-18T03:52:36.320Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@type='date'] in page."}
+{"level":30,"time":"2026-06-18T03:52:36.367Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method click"}
+{"level":30,"time":"2026-06-18T03:52:36.376Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method keyboardKey"}
+{"level":30,"time":"2026-06-18T03:52:36.376Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Invoking keyboard action press with params [\"Control+A\"]"}
+{"level":30,"time":"2026-06-18T03:52:36.383Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method keyboardKey"}
+{"level":30,"time":"2026-06-18T03:52:36.390Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-06-18T03:52:36.390Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@type='date'] in page."}
+{"level":30,"time":"2026-06-18T03:52:36.483Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method typeText"}
+{"level":30,"time":"2026-06-18T03:52:36.495Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method keyboardKey"}
+{"level":30,"time":"2026-06-18T03:52:36.495Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Invoking keyboard action press with params [\"Tab\"]"}
+{"level":30,"time":"2026-06-18T03:52:36.500Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method keyboardKey"}
+{"level":30,"time":"2026-06-18T03:52:37.513Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getDomProperty"}
+{"level":30,"time":"2026-06-18T03:52:37.513Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@type='date'] in page."}
+{"level":30,"time":"2026-06-18T03:52:37.527Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Retrieved dom property for element xpath=//input[@type='date'] containing 2027-05-26"}
+{"level":30,"time":"2026-06-18T03:52:37.527Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getDomProperty"}
+{"level":30,"time":"2026-06-18T03:52:37.538Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:37.538Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@type='file'] in page."}
+{"level":30,"time":"2026-06-18T03:52:37.542Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:37.558Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Reading multiplepart uploadFileBySelector"}
+{"level":30,"time":"2026-06-18T03:52:37.559Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@type='file'] in page."}
+{"level":30,"time":"2026-06-18T03:52:37.559Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Uploading file(s) C:\\Users\\raquel.goncalves\\portal_laudos\\fixtures\\laudo_teste.pdf to xpath=//input[@type='file']"}
+{"level":30,"time":"2026-06-18T03:52:40.604Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:40.604Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(.,'Salvar')] in page."}
+{"level":30,"time":"2026-06-18T03:52:40.608Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:40.616Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getDomProperty"}
+{"level":30,"time":"2026-06-18T03:52:40.616Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//input[@type='date'] in page."}
+{"level":30,"time":"2026-06-18T03:52:40.629Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Retrieved dom property for element xpath=//input[@type='date'] containing 2027-05-26"}
+{"level":30,"time":"2026-06-18T03:52:40.629Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getDomProperty"}
+{"level":30,"time":"2026-06-18T03:52:40.641Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getText"}
+{"level":30,"time":"2026-06-18T03:52:40.641Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(.,'Salvar')] in page."}
+{"level":30,"time":"2026-06-18T03:52:40.667Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Retrieved text for element xpath=//button[contains(.,'Salvar')] containing SALVAR"}
+{"level":30,"time":"2026-06-18T03:52:40.667Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getText"}
+{"level":30,"time":"2026-06-18T03:52:40.677Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2026-06-18T03:52:40.677Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(.,'Salvar')] in page."}
+{"level":30,"time":"2026-06-18T03:52:40.688Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Retrieved attribute for element xpath=//button[contains(.,'Salvar')] containing MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1fitwok"}
+{"level":30,"time":"2026-06-18T03:52:40.688Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2026-06-18T03:52:40.701Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2026-06-18T03:52:40.702Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(.,'Salvar')] in page."}
+{"level":30,"time":"2026-06-18T03:52:40.713Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Retrieved attribute for element xpath=//button[contains(.,'Salvar')] containing null"}
+{"level":30,"time":"2026-06-18T03:52:40.713Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2026-06-18T03:52:40.744Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getElements"}
+{"level":30,"time":"2026-06-18T03:52:40.744Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is disabled, return Locator: xpath=//*[@required] in page."}
+{"level":30,"time":"2026-06-18T03:52:40.745Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2026-06-18T03:52:40.756Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Found 3 elements."}
+{"level":30,"time":"2026-06-18T03:52:40.757Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getElements"}
+{"level":30,"time":"2026-06-18T03:52:40.781Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getElements"}
+{"level":30,"time":"2026-06-18T03:52:40.781Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is disabled, return Locator: xpath=//*[@aria-invalid='true'] in page."}
+{"level":30,"time":"2026-06-18T03:52:40.782Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2026-06-18T03:52:50.796Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Found 0 elements."}
+{"level":30,"time":"2026-06-18T03:52:50.796Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getElements"}
+{"level":30,"time":"2026-06-18T03:52:53.812Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:53.812Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(.,'Salvar')] in page."}
+{"level":30,"time":"2026-06-18T03:52:53.822Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:52:53.831Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method click"}
+{"level":30,"time":"2026-06-18T03:52:53.831Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(.,'Salvar')] in page."}
+{"level":30,"time":"2026-06-18T03:52:53.879Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method click"}
+{"level":30,"time":"2026-06-18T03:52:53.896Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:53.898Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:53.903Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-06-18T03:52:53.915Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Removed page=589dfbcd-5522-42c3-9e5a-afab7b1a3481 from context=7db417c2-440e-4d0b-9388-0df2c155ad9a page stack"}
+{"level":30,"time":"2026-06-18T03:52:54.307Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12227:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13124:59)
+    at PlaywrightServer.setTimeout (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13372:57)
+    at Object.onReceiveHalfClose (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+=============================================================
+{"level":30,"time":"2026-06-18T03:52:54.333Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:54.333Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:52:54.398Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-06-18T03:52:54.399Z","pid":21224,"hostname":"SPOELNB-J0274R3","msg":"End of node method closeAllBrowsers"}

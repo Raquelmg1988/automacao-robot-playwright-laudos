@@ -1,0 +1,7 @@
+
+# Allure Reports
+allure-results/
+allure-report/
+
+# Variaveis locais
+portal_laudos_estrutura/resources/variables_local.robot

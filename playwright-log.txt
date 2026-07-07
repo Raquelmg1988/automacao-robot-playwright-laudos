@@ -1,0 +1,55 @@
+{"level":30,"time":"2026-06-18T03:06:07.830Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Listening on 127.0.0.1:57965"}
+(node:10340) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2026-06-18T03:06:08.036Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-06-18T03:06:09.378Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Adding browser to stack: chromium, version: 140.0.7339.16"}
+{"level":30,"time":"2026-06-18T03:06:09.378Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-06-18T03:06:09.388Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"storageState\":\"C:\\\\Users\\\\raquel.goncalves\\\\portal_laudos\\\\portal_laudos_estrutura\\\\resources/../../auth_state.json\",\"viewport\":{\"height\":720,\"width\":1280}}"}
+{"level":30,"time":"2026-06-18T03:06:09.389Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@dd596cccf1223f2be774662a3535049c\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=1a031739-4b2c-4b3d-ac70-d7d5df527a9b\"}"}
+{"level":30,"time":"2026-06-18T03:06:09.389Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Trace file: "}
+{"level":30,"time":"2026-06-18T03:06:09.379Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-06-18T03:06:09.388Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-06-18T03:06:10.153Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Setting default timeout for context context=11aaf57e-cf38-47c0-815d-6ac57aa2588f to 10000"}
+{"level":30,"time":"2026-06-18T03:06:10.154Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method newContext"}
+{"level":30,"time":"2026-06-18T03:06:10.154Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Changed active context: context=11aaf57e-cf38-47c0-815d-6ac57aa2588f"}
+{"level":30,"time":"2026-06-18T03:06:10.164Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-06-18T03:06:10.165Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@dd596cccf1223f2be774662a3535049c\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=11aaf57e-cf38-47c0-815d-6ac57aa2588f\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@cbe183f698dbd828572631e021406469\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"storageState\":\"C:\\\\Users\\\\raquel.goncalves\\\\portal_laudos\\\\portal_laudos_estrutura\\\\resources/../../auth_state.json\",\"viewport\":{\"height\":720,\"width\":1280}},\"traceFile\":\"\"}],\"id\":\"browser=1a031739-4b2c-4b3d-ac70-d7d5df527a9b\"}"}
+{"level":30,"time":"2026-06-18T03:06:10.324Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Video path: undefined"}
+{"level":30,"time":"2026-06-18T03:06:10.324Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Changed active page"}
+{"level":30,"time":"2026-06-18T03:06:10.553Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method newPage"}
+{"level":30,"time":"2026-06-18T03:06:10.560Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-06-18T03:06:10.560Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"timeout: 10000 state: networkidle"}
+{"level":30,"time":"2026-06-18T03:06:15.273Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-06-18T03:06:15.282Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2026-06-18T03:06:15.282Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is disabled, return Locator: xpath=//button[contains(.,'Entrar com Office 365')] in page."}
+{"level":30,"time":"2026-06-18T03:06:15.310Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method getElementCount"}
+{"level":30,"time":"2026-06-18T03:06:15.316Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:06:15.317Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(.,'Adicionar Laudo')] in page."}
+{"level":30,"time":"2026-06-18T03:06:15.325Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-06-18T03:06:15.331Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:06:15.334Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:06:15.346Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2026-06-18T03:06:15.346Z","pid":10340,"hostname":"SPOELNB-J0274R3","Take screenshot with options: ":{"path":"C:\\Users\\raquel.goncalves\\portal_laudos\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2026-06-18T03:06:15.467Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2026-06-18T03:06:45.475Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:06:45.479Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:06:45.483Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-06-18T03:06:45.496Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Removed page=d3ba570f-5810-499d-8708-00549e97e233 from context=11aaf57e-cf38-47c0-815d-6ac57aa2588f page stack"}
+{"level":30,"time":"2026-06-18T03:06:45.784Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12227:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13124:59)
+    at PlaywrightServer.setTimeout (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13372:57)
+    at Object.onReceiveHalfClose (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+=============================================================
+{"level":30,"time":"2026-06-18T03:06:45.793Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:06:45.793Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-06-18T03:06:45.840Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-06-18T03:06:45.840Z","pid":10340,"hostname":"SPOELNB-J0274R3","msg":"End of node method closeAllBrowsers"}

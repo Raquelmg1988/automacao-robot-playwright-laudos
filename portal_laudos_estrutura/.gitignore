@@ -1,0 +1,23 @@
+﻿# sessão/login
+auth_state.json
+
+# resultados robot
+results/
+log.html
+report.html
+output.xml
+
+# playwright
+playwright-log.txt
+
+# python / venv
+venv/
+.venv/
+__pycache__/
+
+# vscode
+.vscode/
+
+# arquivos temporários
+*.pyc
+*.tmp

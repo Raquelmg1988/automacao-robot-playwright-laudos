@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2026-06-18T00:52:16.744339" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Laudos" source="C:\Users\raquel.goncalves\portal_laudos\portal_laudos_estrutura\tests\laudos\test_laudos.robot">
+<kw name="Abrir Sessao Logada Laudos" owner="login_laudos_keywords" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-18T00:52:17.220924" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raquel.goncalves\\portal_laudos\\results\\browser\\traces\\temp\\e3a90e6c-4b3e-471b-be32-f32ea8d10f9b"}</msg>
+<msg time="2026-06-18T00:52:17.452599" level="INFO">Starting Browser process C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:58166</msg>
+<msg time="2026-06-18T00:52:20.737083" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raquel.goncalves\\portal_laudos\\results\\browser\\traces\\temp\\e3a90e6c-4b3e-471b-be32-f32ea8d10f9b"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-06-18T00:52:17.220019" elapsed="3.517357"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-06-18T00:52:20.759198" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "storageState": "C:\\Users\\raquel.goncalves\\portal_laudos\\portal_laudos_estrutura\\resources/../../auth_state.json",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2026-06-18T00:52:21.673034" level="INFO">Successfully created context. </msg>
+<msg time="2026-06-18T00:52:21.673189" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'storageState': 'C:\\Users\\raquel.goncalves\\portal_laudos\\portal_laudos_estrutura\\resources/../../auth_state.json', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<arg>storageState=${AUTH_STATE_JSON}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-06-18T00:52:20.753296" elapsed="0.920045"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-06-18T00:52:22.112543" level="INFO">Successfully initialized new page object and opened url: https://hml.portal-laudos.grupoelfa.com.br/</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-06-18T00:52:21.683933" elapsed="0.428993"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-06-18T00:52:22.118144" level="INFO">Waiting page load to state to receive networkidle in 10000.0</msg>
+<msg time="2026-06-18T00:52:27.528428" level="INFO">Load state networkidle got in 10000</msg>
+<arg>networkidle</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2026-06-18T00:52:22.117220" elapsed="5.411607"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; VALIDANDO SESSAO &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:27.537530" elapsed="0.001154"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2026-06-18T00:52:27.580885" level="INFO">${office} = 0</msg>
+<var>${office}</var>
+<arg>xpath=//button[contains(.,'Entrar com Office 365')]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:27.539291" elapsed="0.041650"/>
+</kw>
+<if>
+<branch type="IF" condition="${office} &gt; 0">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; SESSAO EXPIRADA - LOGIN NECESSARIO &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-06-18T00:52:27.585875" elapsed="0.000391"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>xpath=//button[contains(.,'Entrar com Office 365')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-06-18T00:52:27.587054" elapsed="0.000497"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>xpath=//button[contains(.,'Adicionar Laudo')]</arg>
+<arg>visible</arg>
+<arg>120s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-06-18T00:52:27.588285" elapsed="0.000460"/>
+</kw>
+<status status="NOT RUN" start="2026-06-18T00:52:27.584919" elapsed="0.004373"/>
+</branch>
+<status status="PASS" start="2026-06-18T00:52:27.584828" elapsed="0.004919"/>
+</if>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:27.607388" level="INFO">Waited for Element with selector xpath=//button[contains(.,'Adicionar Laudo')] at state visible</msg>
+<arg>xpath=//button[contains(.,'Adicionar Laudo')]</arg>
+<arg>visible</arg>
+<arg>60s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:27.590099" elapsed="0.017530"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; PORTAL CARREGADO &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:27.611370" elapsed="0.000556"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:17.218738" elapsed="10.393466"/>
+</kw>
+<test id="s1-t1" name="Validar Home Portal Laudos" line="12">
+<kw name="Validar Tela Laudos" owner="laudos_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:27.633893" level="INFO">Waited for Element with selector xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] at state visible</msg>
+<arg>${BTN_ADICIONAR_LAUDO}</arg>
+<arg>visible</arg>
+<arg>60s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:27.620973" elapsed="0.013102"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:27.620211" elapsed="0.016684"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:27.612418" elapsed="0.025040"/>
+</test>
+<test id="s1-t2" name="Validar Pesquisa Laudo" line="15">
+<kw name="Pesquisar Laudo" owner="laudos_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:27.670093" level="INFO">Waited for Element with selector xpath=(//input[contains(@class,'MuiInputBase-input')])[1] at state visible</msg>
+<arg>${INPUT_PESQUISA}</arg>
+<arg>visible</arg>
+<arg>30s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:27.659286" elapsed="0.011058"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-18T00:52:27.675216" level="INFO">Fills the text 'OCREVUS' in the given field.</msg>
+<arg>${INPUT_PESQUISA}</arg>
+<arg>${texto}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:27.674288" elapsed="0.039387"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-18T00:52:30.718663" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-18T00:52:27.717793" elapsed="3.001004"/>
+</kw>
+<arg>OCREVUS</arg>
+<status status="PASS" start="2026-06-18T00:52:27.658288" elapsed="3.063691"/>
+</kw>
+<kw name="Validar Tela Laudos" owner="laudos_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:30.732417" level="INFO">Waited for Element with selector xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] at state visible</msg>
+<arg>${BTN_ADICIONAR_LAUDO}</arg>
+<arg>visible</arg>
+<arg>60s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:30.723157" elapsed="0.009464"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:30.722506" elapsed="0.013398"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:27.651978" elapsed="3.084451"/>
+</test>
+<test id="s1-t3" name="Validar Adicionar Novo Laudo" line="19">
+<kw name="Adicionar Novo Laudo" owner="laudos_keywords">
+<kw name="Abrir Modal Adicionar Laudo" owner="laudos_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:30.765157" level="INFO">Waited for Element with selector xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] at state visible</msg>
+<arg>${BTN_ADICIONAR_LAUDO}</arg>
+<arg>visible</arg>
+<arg>20s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:30.755647" elapsed="0.009856"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:30.797018" level="INFO">Waited for Element with selector xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')] at state enabled</msg>
+<arg>${BTN_ADICIONAR_LAUDO}</arg>
+<arg>enabled</arg>
+<arg>20s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:30.768903" elapsed="0.028400"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-06-18T00:52:30.801212" level="INFO">Clicks the element 'xpath=//button[contains(@class,'btn-add-batch') and contains(.,'Adicionar Laudo')]'.</msg>
+<arg>${BTN_ADICIONAR_LAUDO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:30.800538" elapsed="0.120609"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:30.935808" level="INFO">Waited for Element with selector xpath=//input[@required and @type='text' and not(@disabled)][1] at state visible</msg>
+<arg>${INPUT_LOTE}</arg>
+<arg>visible</arg>
+<arg>30s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:30.925090" elapsed="0.010985"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:30.755225" elapsed="0.184887"/>
+</kw>
+<kw name="Preencher Lote" owner="laudos_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-06-18T00:52:30.942933" level="INFO">Fills the text '1' in the given field.</msg>
+<arg>${INPUT_LOTE}</arg>
+<arg>1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:30.941551" elapsed="0.041456"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:30.940817" elapsed="0.046694"/>
+</kw>
+<kw name="Selecionar Medicamento" owner="laudos_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:30.999314" level="INFO">Waited for Element with selector xpath=//input[@role='combobox'] at state visible</msg>
+<arg>${SELECT_MEDICAMENTO}</arg>
+<arg>visible</arg>
+<arg>20s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:30.988997" elapsed="0.010521"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-06-18T00:52:31.003323" level="INFO">Clicks the element 'xpath=//input[@role='combobox']'.</msg>
+<arg>${SELECT_MEDICAMENTO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:31.002312" elapsed="0.139776"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2026-06-18T00:52:31.147120" level="INFO">Types the text 'CAMPO OPERATORIO' in the given field.</msg>
+<arg>${SELECT_MEDICAMENTO}</arg>
+<arg>CAMPO OPERATORIO</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:31.146106" elapsed="0.180592"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:35.235547" level="INFO">Waited for Element with selector xpath=(//li[@role='option'])[1] at state visible</msg>
+<arg>xpath=(//li[@role='option'])[1]</arg>
+<arg>visible</arg>
+<arg>5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:31.331590" elapsed="3.904444"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-06-18T00:52:35.242189" level="INFO">Clicks the element 'xpath=(//li[@role='option'])[1]'.</msg>
+<arg>xpath=(//li[@role='option'])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:35.240601" elapsed="0.058962"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-18T00:52:36.304465" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-18T00:52:35.303377" elapsed="1.001302"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:30.988226" elapsed="5.323597"/>
+</kw>
+<kw name="Preencher Data Expiracao" owner="laudos_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:36.322084" level="INFO">Waited for Element with selector xpath=//input[@type='date'] at state visible</msg>
+<arg>${INPUT_DATA_EXPIRACAO}</arg>
+<arg>visible</arg>
+<arg>20s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:36.313426" elapsed="0.009233"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-06-18T00:52:36.327776" level="INFO">Clicks the element 'xpath=//input[@type='date']'.</msg>
+<arg>${INPUT_DATA_EXPIRACAO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:36.326609" elapsed="0.053429"/>
+</kw>
+<kw name="Keyboard Key" owner="Browser">
+<arg>press</arg>
+<arg>Control+A</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" start="2026-06-18T00:52:36.385087" elapsed="0.011527"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2026-06-18T00:52:36.398801" level="INFO">Types the text '26/05/2027' in the given field.</msg>
+<arg>${INPUT_DATA_EXPIRACAO}</arg>
+<arg>26/05/2027</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:36.397422" elapsed="0.099419"/>
+</kw>
+<kw name="Keyboard Key" owner="Browser">
+<arg>press</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" start="2026-06-18T00:52:36.501489" elapsed="0.011100"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-18T00:52:37.514100" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-18T00:52:36.513132" elapsed="1.001145"/>
+</kw>
+<kw name="Get Property" owner="Browser">
+<msg time="2026-06-18T00:52:37.541017" level="INFO">Property: '2027-05-26'</msg>
+<msg time="2026-06-18T00:52:37.541349" level="INFO">${valor} = 2027-05-26</msg>
+<var>${valor}</var>
+<arg>${INPUT_DATA_EXPIRACAO}</arg>
+<arg>value</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the ``property`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:37.520978" elapsed="0.020447"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>DATA_PREENCHIDA=${valor}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:37.545973" elapsed="0.000541"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:36.312547" elapsed="1.234160"/>
+</kw>
+<kw name="Anexar Laudo" owner="laudos_keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:37.556048" level="INFO">Waited for Element with selector xpath=//input[@type='file'] at state attached</msg>
+<arg>${INPUT_UPLOAD}</arg>
+<arg>attached</arg>
+<arg>20s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:37.547419" elapsed="0.008804"/>
+</kw>
+<kw name="Upload File By Selector" owner="Browser">
+<arg>${INPUT_UPLOAD}</arg>
+<arg>${UPLOAD_PDF_TESTE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Uploads file from ``path`` to file input element matched by selector.</doc>
+<status status="PASS" start="2026-06-18T00:52:37.561210" elapsed="0.038826"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; PDF ANEXADO &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:37.600539" elapsed="0.000845"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-18T00:52:40.602788" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-18T00:52:37.601748" elapsed="3.001337"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:37.546954" elapsed="3.062855"/>
+</kw>
+<kw name="Salvar Laudo" owner="laudos_keywords">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; VALIDANDO BOTAO SALVAR &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.611160" elapsed="0.000642"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:40.620636" level="INFO">Waited for Element with selector xpath=//button[contains(.,'Salvar')] at state visible</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>20s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.612216" elapsed="0.008702"/>
+</kw>
+<kw name="Get Property" owner="Browser">
+<msg time="2026-06-18T00:52:40.642118" level="INFO">Property: '2027-05-26'</msg>
+<msg time="2026-06-18T00:52:40.642416" level="INFO">${data} = 2027-05-26</msg>
+<var>${data}</var>
+<arg>${INPUT_DATA_EXPIRACAO}</arg>
+<arg>value</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the ``property`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.624473" elapsed="0.018038"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>DATA=${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.647389" elapsed="0.000693"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-06-18T00:52:40.680391" level="INFO">Text: 'SALVAR'</msg>
+<msg time="2026-06-18T00:52:40.680808" level="INFO">${texto_botao} = SALVAR</msg>
+<var>${texto_botao}</var>
+<arg>${BTN_SALVAR}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.648819" elapsed="0.032043"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>TEXTO_BOTAO=${texto_botao}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.684987" elapsed="0.000854"/>
+</kw>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2026-06-18T00:52:40.700983" level="INFO">Attribute is: 'MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1fitwok'</msg>
+<msg time="2026-06-18T00:52:40.701229" level="INFO">${classe} = MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiLoadingButton-root MuiButton...</msg>
+<var>${classe}</var>
+<arg>${BTN_SALVAR}</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.686153" elapsed="0.015133"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>CLASS=${classe}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.706856" elapsed="0.000975"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2026-06-18T00:52:40.726003" level="FAIL">AttributeError: Attribute 'disabled' not found!</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>disabled</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="FAIL" start="2026-06-18T00:52:40.708708" elapsed="0.027661">AttributeError: Attribute 'disabled' not found!</status>
+</kw>
+<msg time="2026-06-18T00:52:40.743138" level="INFO">${disabled} = False</msg>
+<var>${disabled}</var>
+<arg>Get Attribute</arg>
+<arg>${BTN_SALVAR}</arg>
+<arg>disabled</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.708171" elapsed="0.035098"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>DISABLED=${disabled}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.749255" elapsed="0.001280"/>
+</kw>
+<kw name="Get Elements" owner="Browser">
+<msg time="2026-06-18T00:52:40.770219" level="INFO">Found locator('//*[@required]').first(),locator('//*[@required]').nth(1),locator('//*[@required]').nth(2) Locators successfully.</msg>
+<msg time="2026-06-18T00:52:40.770694" level="INFO">${required} = ['xpath=//*[@required] &gt;&gt; nth=0', 'xpath=//*[@required] &gt;&gt; nth=1', 'xpath=//*[@required] &gt;&gt; nth=2']</msg>
+<var>${required}</var>
+<arg>xpath=//*[@required]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.751400" elapsed="0.019396"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-06-18T00:52:40.777508" level="INFO">Length is 3.</msg>
+<msg time="2026-06-18T00:52:40.777808" level="INFO">${total} = 3</msg>
+<var>${total}</var>
+<arg>${required}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.776477" elapsed="0.001641"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>CAMPOS_REQUIRED=${total}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.785488" elapsed="0.001535"/>
+</kw>
+<kw name="Get Elements" owner="Browser">
+<msg time="2026-06-18T00:52:50.808485" level="INFO">Found  Locators successfully.</msg>
+<msg time="2026-06-18T00:52:50.808872" level="INFO">${invalidos} = []</msg>
+<var>${invalidos}</var>
+<arg>xpath=//*[@aria-invalid='true']</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:40.787793" elapsed="10.021147"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-06-18T00:52:50.812493" level="INFO">Length is 0.</msg>
+<msg time="2026-06-18T00:52:50.812615" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>${invalidos}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-06-18T00:52:50.811982" elapsed="0.000672"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>CAMPOS_INVALIDOS=${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:50.815525" elapsed="0.001437"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-18T00:52:53.818239" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-18T00:52:50.817396" elapsed="3.000979"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:52:53.834208" level="INFO">Waited for Element with selector xpath=//button[contains(.,'Salvar')] at state enabled</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>enabled</arg>
+<arg>5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:52:53.821489" elapsed="0.012897"/>
+</kw>
+<msg time="2026-06-18T00:52:53.837276" level="INFO">${enabled} = True</msg>
+<var>${enabled}</var>
+<arg>Wait For Elements State</arg>
+<arg>${BTN_SALVAR}</arg>
+<arg>enabled</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-06-18T00:52:53.821058" elapsed="0.016269"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>BOTAO_ENABLED=${enabled}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:53.839803" elapsed="0.000537"/>
+</kw>
+<if>
+<branch type="IF" condition="${enabled}">
+<kw name="Click" owner="Browser">
+<msg time="2026-06-18T00:52:53.841641" level="INFO">Clicks the element 'xpath=//button[contains(.,'Salvar')]'.</msg>
+<arg>${BTN_SALVAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:52:53.841087" elapsed="0.050429"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; LAUDO SALVO &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:52:53.894525" elapsed="0.000788"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:53.840690" elapsed="0.054946"/>
+</branch>
+<branch type="ELSE">
+<kw name="Take Screenshot" owner="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2026-06-18T00:52:53.896332" elapsed="0.000200"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Botão Salvar permaneceu desabilitado</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-06-18T00:52:53.896843" elapsed="0.000208"/>
+</kw>
+<status status="NOT RUN" start="2026-06-18T00:52:53.895872" elapsed="0.001334"/>
+</branch>
+<status status="PASS" start="2026-06-18T00:52:53.840641" elapsed="0.056700"/>
+</if>
+<status status="PASS" start="2026-06-18T00:52:40.610471" elapsed="13.286949"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:30.754607" elapsed="23.142986"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:30.748857" elapsed="23.149326"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2026-06-18T00:52:54.320363" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-18T00:52:53.911898" elapsed="0.408750"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:52:16.885191" elapsed="37.438655"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Laudos" id="s1" pass="3" fail="0" skip="0">Test Laudos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

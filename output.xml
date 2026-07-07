@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2026-06-18T00:06:06.311164" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Validar Sessao" source="C:\Users\raquel.goncalves\portal_laudos\portal_laudos_estrutura\tests\auth\test_validar_sessao.robot">
+<kw name="Abrir Sessao Logada Laudos" owner="login_laudos_keywords" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-18T00:06:06.520537" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\raquel.goncalves\\portal_laudos\\browser\\traces\\temp\\78e05093-a16d-4bca-8984-ac103862d29d"}</msg>
+<msg time="2026-06-18T00:06:06.722227" level="INFO">Starting Browser process C:\Users\raquel.goncalves\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:57965</msg>
+<msg time="2026-06-18T00:06:09.381574" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\raquel.goncalves\\portal_laudos\\browser\\traces\\temp\\78e05093-a16d-4bca-8984-ac103862d29d"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-06-18T00:06:06.519516" elapsed="2.862322"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-06-18T00:06:09.384800" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "storageState": "C:\\Users\\raquel.goncalves\\portal_laudos\\portal_laudos_estrutura\\resources/../../auth_state.json",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2026-06-18T00:06:10.157219" level="INFO">Successfully created context. </msg>
+<msg time="2026-06-18T00:06:10.157403" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'storageState': 'C:\\Users\\raquel.goncalves\\portal_laudos\\portal_laudos_estrutura\\resources/../../auth_state.json', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<arg>storageState=${AUTH_STATE_JSON}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-06-18T00:06:09.382224" elapsed="0.775487"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-06-18T00:06:10.555945" level="INFO">Successfully initialized new page object and opened url: https://hml.portal-laudos.grupoelfa.com.br/</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-06-18T00:06:10.158047" elapsed="0.398111"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-06-18T00:06:10.557129" level="INFO">Waiting page load to state to receive networkidle in 10000.0</msg>
+<msg time="2026-06-18T00:06:15.276306" level="INFO">Load state networkidle got in 10000</msg>
+<arg>networkidle</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2026-06-18T00:06:10.556345" elapsed="4.720293"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; VALIDANDO SESSAO &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:06:15.276995" elapsed="0.000866"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2026-06-18T00:06:15.312398" level="INFO">${office} = 0</msg>
+<var>${office}</var>
+<arg>xpath=//button[contains(.,'Entrar com Office 365')]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2026-06-18T00:06:15.278345" elapsed="0.034101"/>
+</kw>
+<if>
+<branch type="IF" condition="${office} &gt; 0">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; SESSAO EXPIRADA - LOGIN NECESSARIO &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-06-18T00:06:15.312981" elapsed="0.000111"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>xpath=//button[contains(.,'Entrar com Office 365')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-06-18T00:06:15.313239" elapsed="0.000120"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>xpath=//button[contains(.,'Adicionar Laudo')]</arg>
+<arg>visible</arg>
+<arg>120s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-06-18T00:06:15.313488" elapsed="0.000105"/>
+</kw>
+<status status="NOT RUN" start="2026-06-18T00:06:15.312596" elapsed="0.001065"/>
+</branch>
+<status status="PASS" start="2026-06-18T00:06:15.312561" elapsed="0.001163"/>
+</if>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-06-18T00:06:15.327596" level="INFO">Waited for Element with selector xpath=//button[contains(.,'Adicionar Laudo')] at state visible</msg>
+<arg>xpath=//button[contains(.,'Adicionar Laudo')]</arg>
+<arg>visible</arg>
+<arg>60s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-06-18T00:06:15.313843" elapsed="0.014073"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&gt;&gt;&gt; PORTAL CARREGADO &lt;&lt;&lt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:06:15.328161" elapsed="0.000505"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:06:06.518840" elapsed="8.809951"/>
+</kw>
+<test id="s1-t1" name="Validar Sessao Salva" line="10">
+<kw name="Get Url" owner="Browser">
+<msg time="2026-06-18T00:06:15.340103" level="INFO">${url} = https://hml.portal-laudos.grupoelfa.com.br/</msg>
+<var>${url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2026-06-18T00:06:15.336370" elapsed="0.003779"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>URL=${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-18T00:06:15.340601" elapsed="0.000642"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-18T00:06:15.468961" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-06-18T00:06:15.341678" elapsed="0.127499"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-18T00:06:45.470173" level="INFO">Slept 30 seconds.</msg>
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-18T00:06:15.469622" elapsed="30.000673"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:06:15.328899" elapsed="30.141841"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2026-06-18T00:06:45.785578" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-18T00:06:45.481882" elapsed="0.303948"/>
+</kw>
+<status status="PASS" start="2026-06-18T00:06:06.314222" elapsed="39.472150"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Validar Sessao" id="s1" pass="1" fail="0" skip="0">Test Validar Sessao</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

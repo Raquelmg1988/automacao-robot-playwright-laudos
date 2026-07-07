@@ -1,0 +1,43 @@
+stages:
+  - test
+
+robot_tests:
+  stage: test
+
+  # Alinhado corretamente agora (removido o espaço extra)
+  image: mcr.microsoft.com/playwright:v1.59.1-jammy
+
+  variables:
+    HEADLESS: "True"
+    CI: "True"
+
+  before_script:
+    - apt-get update
+    - apt-get install -y python3-pip unzip openjdk-11-jre
+
+    - pip install -r requirements.txt
+
+    - rfbrowser init
+
+    - mkdir -p results
+    - mkdir -p allure-results
+
+    - cp "$AUTH_STATE_JSON" auth_state.json
+
+  script:
+    - robot --listener allure_robotframework:allure-results -d results portal_laudos_estrutura/tests/laudos/test_laudos.robot || true
+    
+    # Gera o relatório estático na pasta allure-report
+    - allure generate allure-results -o allure-report --clean
+
+  after_script:
+    # Apaga o arquivo de sessão por segurança para não expor tokens no runner
+    - rm -f auth_state.json
+
+  artifacts:
+    when: always
+    expire_in: 7 days
+    paths:
+      - results/
+      - allure-results/
+      - allure-report/
